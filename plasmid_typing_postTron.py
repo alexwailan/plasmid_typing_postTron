@@ -18,5 +18,6 @@ trait_infile = options.file_of_trait_fastqs
 
 with open(trait_infile, "r") as inputdata:
     for i in inputdata:
-        os.system('blastn -query plasmidFinder_16032017.fa -subject spades_'+i+'/contigs.fasta -perc_identity '+identity_perc+' -outfmt "10 qaccver saccver pident length mismatch gapopen qlen qstart qend slen sstart send evalue bitscore nident ppos" > '+i+'_plasmidfinder16032017_blast_results_'+date+'.csv')
+        print(i) #to see what is going on here?
+        #os.system('blastn -query plasmidFinder_16032017.fa -subject spades_'+i+'/contigs.fasta -perc_identity '+identity_perc+' -outfmt "10 qaccver saccver pident length mismatch gapopen qlen qstart qend slen sstart send evalue bitscore nident ppos" > '+i+'_plasmidfinder16032017_blast_results_'+date+'.csv')
         
